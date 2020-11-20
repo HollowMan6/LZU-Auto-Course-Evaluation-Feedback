@@ -12,6 +12,9 @@
 [![GPL Licence](https://img.shields.io/badge/license-GPL-blue)](https://opensource.org/licenses/GPL-3.0/)
 [![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/LZU-Auto-Course-Evaluation-Feedback.svg)](../../archive/master.zip)
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/HollowMan6/LZU-Auto-Course-Evaluation-Feedback.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/LZU-Auto-Course-Evaluation-Feedback/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/HollowMan6/LZU-Auto-Course-Evaluation-Feedback.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/HollowMan6/LZU-Auto-Course-Evaluation-Feedback/context:python)
+
 (English version is down below)
 
 [Python库依赖](../../network/dependencies)

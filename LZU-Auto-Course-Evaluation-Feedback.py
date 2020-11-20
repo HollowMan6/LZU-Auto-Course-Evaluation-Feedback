@@ -18,7 +18,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 driver = webdriver.Chrome()
 driver.get("http://my.lzu.edu.cn:8080/login?service=http://my.lzu.edu.cn")
-wait = WebDriverWait(driver, 5)
+WebDriverWait(driver, 5)
 NetworkErr = False
 while True:
     if driver.find_element_by_xpath('/html').get_attribute('dir') == "ltr":
@@ -38,7 +38,7 @@ while True:
         break
 
 driver.get("http://qa.lzu.edu.cn:8081/loginSSO2")
-wait = WebDriverWait(driver, 5)
+WebDriverWait(driver, 5)
 NetworkErr = False
 while True:
     if driver.find_element_by_xpath('/html').get_attribute('dir') == "ltr":
