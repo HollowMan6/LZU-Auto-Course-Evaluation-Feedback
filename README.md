@@ -39,7 +39,7 @@
 
 * [兰州大学自动评教 脚本](LZU-Auto-Course-Evaluation-Feedback.py)
 
-测试于2020年11月20日, `2020-2021学年第一学期期中评教`。
+测试于2020年11月20日, [2020-2021学年第一学期期中评教](http://jwc.lzu.edu.cn/lzupage/2020/11/03/N20201103161710.html)。
 
 **警告**：
 
@@ -53,7 +53,7 @@
 
 Using selenium to realize the function. Before using, make sure that Google Chrome browser is installed on the computer, and [Chrome Driver](https://chromedriver.chromium.org) is placed in the programme execution directory.
 
-The programme is suitable for course evaluation at `http://qa.lzu.edu.cn:8081`。
+The programme is suitable for course evaluation at `http://qa.lzu.edu.cn:8081`.
 
 ## Usage
 
@@ -71,7 +71,7 @@ If the number of teachers of the course is more than 3, the program will evaluat
 
 * [LZU Auto Course Evaluation Feedback Script](LZU-Auto-Course-Evaluation-Feedback.py)
 
-Tested on 2020-11-20, `2020/21 Midterm Course Evaluation`。
+Tested on 2020-11-20, [2020/21 Midterm Course Evaluation](http://jwc.lzu.edu.cn/lzupage/2020/11/03/N20201103161710.html).
 
 **Warning**:
 
