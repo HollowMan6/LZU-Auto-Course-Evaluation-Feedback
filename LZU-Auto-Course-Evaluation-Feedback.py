@@ -56,6 +56,11 @@ js = '''return document.querySelector('#task-list').getElementsByTagName('li').l
 taskList = driver.execute_script(js)
 
 for i in range(1, taskList+1):
+    js = '''return document.querySelector('#task-list>li:nth-child(''' + \
+        str(i)+''')').className'''
+    currentClass = driver.execute_script(js)
+    if currentClass == "over":
+        continue
     js = '''document.querySelector('#task-list>li:nth-child(''' + \
         str(i)+''')').click()'''
     driver.execute_script(js)
