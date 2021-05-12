@@ -39,7 +39,7 @@
 
 * [兰州大学自动评教 脚本](LZU-Auto-Course-Evaluation-Feedback.py)
 
-测试于2020年12月31日, 2020-2021学年第一学期期末评教。
+测试于2021年5月12日, 2020-2021学年第二学期期中评教。
 
 **警告**：
 
@@ -71,7 +71,7 @@ If the number of teachers of the course is more than 3, the program will evaluat
 
 * [LZU Auto Course Evaluation Feedback Script](LZU-Auto-Course-Evaluation-Feedback.py)
 
-Tested on 2020-12-31, 2020/21 Final Course Evaluation.
+Tested on 2020-5-12, 2020/21 Midterm Course Evaluation.
 
 **Warning**:
 
