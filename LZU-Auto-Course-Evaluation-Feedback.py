@@ -7,7 +7,7 @@
 对于使用本代码所造成的一切不良后果，本人将不负任何责任！
 
 Warning:
-For TESTING ONLY, not for any ILLIGAL USE!
+For TESTING ONLY, not for any ILLEGAL USE!
 I will not be responsible for any adverse consequences caused by using this code.
 
 '''
@@ -17,8 +17,12 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver = webdriver.Chrome()
+
+print("请在打开的浏览器界面中登录，之后会自动开始评教！")
+
 driver.get("http://my.lzu.edu.cn:8080/login?service=http://my.lzu.edu.cn")
 WebDriverWait(driver, 5)
+
 NetworkErr = False
 while True:
     if driver.find_element_by_xpath('/html').get_attribute('dir') == "ltr":
@@ -164,4 +168,11 @@ for i in range(1, taskList+1):
         js = '''document.querySelector("#kfxpjDlg > div.modal-header > button").click()'''
         driver.execute_script(js)
         time.sleep(3)
+
+    js = '''document.querySelector("#titlelist > div.actions > div > a").click()'''
+    driver.execute_script(js)
+    time.sleep(3)
+
 driver.close()
+
+print("评教已经结束！请检查是否已经全部评教完成，如果还没有可以多运行几遍本程序。")
