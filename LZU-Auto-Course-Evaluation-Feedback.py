@@ -70,6 +70,14 @@ for i in range(1, taskList+1):
     driver.execute_script(js)
     time.sleep(3)
 
+    js = '''return document.querySelector("#tipDlg > div.modal-footer > button").disabled'''
+    while driver.execute_script(js):
+        time.sleep(3)
+    
+    js = '''document.querySelector("#tipDlg > div.modal-footer > button").click()'''
+    driver.execute_script(js)
+    time.sleep(3)
+
     js = '''return document.querySelector('#pjkc').rows.length'''
     rows = driver.execute_script(js)
 
