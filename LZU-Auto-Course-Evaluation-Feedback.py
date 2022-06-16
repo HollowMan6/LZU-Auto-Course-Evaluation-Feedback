@@ -75,97 +75,30 @@ for i in range(1, taskList+1):
 
     for j in range(1, rows+1):
         js = '''document.querySelector("#pjkc > tr:nth-child(''' + \
-            str(j) + ''') > td:nth-child(3) > div > a").click()'''
+            str(j) + ''') > td:nth-child(7) > div > a").click()'''
         driver.execute_script(js)
         time.sleep(3)
 
-        js = '''return document.querySelector("#sample_2>tbody").getElementsByTagName('tr').length'''
-        teachers = driver.execute_script(js)
+        js = '''return document.getElementsByClassName("controls").length'''
+        input = driver.execute_script(js)
+        time.sleep(3)
 
-        if teachers > 3:
-            js = '''document.querySelector("#kfxpjDlg > div.modal-header > button").click()'''
+        for l in range(3, input-1):
+            js = '''document.getElementsByClassName("controls")['''+str(
+                l)+'''].getElementsByTagName('label')[0].click()'''
             driver.execute_script(js)
-            time.sleep(3)
 
-            if driver.execute_script('''return document.querySelector("#pjkc > tr:nth-child(''' + str(j) + ''') > td:nth-child(6)").getElementsByTagName('div').length == 0'''):
-                pass
-            else:
-                js = '''document.querySelector("#pjkc > tr:nth-child(''' + str(
-                    j) + ''') > td:nth-child(6) > div > a").click()'''
-                driver.execute_script(js)
-                time.sleep(3)
+        js = '''
+            document.getElementsByClassName("controls")['''+str(input-1)+'''].getElementsByTagName('label')[1].click();
+            '''
+        driver.execute_script(js)
+        time.sleep(3)
 
-                js = '''return document.getElementsByClassName("controls").length'''
-                input = driver.execute_script(js)
-                time.sleep(3)
+        js = '''document.querySelector("#pjsubmit").click()'''
+        driver.execute_script(js)
+        time.sleep(3)
 
-                for l in range(3, input-3):
-                    js = '''document.getElementsByClassName("controls")['''+str(
-                        l)+'''].getElementsByTagName('label')[0].click()'''
-                    driver.execute_script(js)
-
-                js = '''
-                    document.getElementsByClassName("controls")['''+str(input-3)+'''].getElementsByTagName('label')[1].click();
-                    document.getElementsByClassName("controls")['''+str(input-2)+'''].getElementsByTagName('textarea')[0].value = "好";
-                    document.getElementsByClassName("controls")['''+str(input-1)+'''].getElementsByTagName('textarea')[0].value = "好";
-                    '''
-                driver.execute_script(js)
-                time.sleep(3)
-
-                js = '''document.querySelector("#pjsubmit").click()'''
-                driver.execute_script(js)
-                time.sleep(3)
-
-                js = '''document.querySelector("#finishDlg > div.modal-footer > button").click()'''
-                driver.execute_script(js)
-                time.sleep(3)
-
-            js = '''document.querySelector("#pjkc > tr:nth-child(''' + str(
-                j) + ''') > td:nth-child(3) > div > a").click()'''
-            driver.execute_script(js)
-            time.sleep(3)
-
-            js = '''return document.querySelector("#sample_2>tbody").getElementsByTagName('tr').length'''
-            teachers = driver.execute_script(js)
-            time.sleep(1)
-
-        for k in range(1, teachers+1):
-            time.sleep(0.5)
-            js = '''return document.querySelector("#sample_2 > tbody > tr:nth-child('''+str(
-                k)+''') > td:nth-child(3) > div > a").className'''
-            if (driver.execute_script(js) == "badge badge-success"):
-                continue
-            js = '''document.querySelector("#sample_2 > tbody > tr:nth-child('''+str(
-                k)+''') > td:nth-child(3) > div > a").click()'''
-            driver.execute_script(js)
-            time.sleep(3)
-
-            js = '''return document.getElementsByClassName("controls").length'''
-            input = driver.execute_script(js)
-            time.sleep(3)
-
-            for l in range(3, input-3):
-                js = '''document.getElementsByClassName("controls")['''+str(
-                    l)+'''].getElementsByTagName('label')[0].click()'''
-                driver.execute_script(js)
-
-            js = '''
-                document.getElementsByClassName("controls")['''+str(input-3)+'''].getElementsByTagName('label')[1].click();
-                document.getElementsByClassName("controls")['''+str(input-2)+'''].getElementsByTagName('textarea')[0].value = "好";
-                document.getElementsByClassName("controls")['''+str(input-1)+'''].getElementsByTagName('textarea')[0].value = "好";
-                '''
-            driver.execute_script(js)
-            time.sleep(3)
-
-            js = '''document.querySelector("#pjsubmit").click()'''
-            driver.execute_script(js)
-            time.sleep(3)
-
-            js = '''document.querySelector("#finishDlg > div.modal-footer > button").click()'''
-            driver.execute_script(js)
-            time.sleep(3)
-
-        js = '''document.querySelector("#kfxpjDlg > div.modal-header > button").click()'''
+        js = '''document.querySelector("#finishDlg > div.modal-footer > button").click()'''
         driver.execute_script(js)
         time.sleep(3)
 
